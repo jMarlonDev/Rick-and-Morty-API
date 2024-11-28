@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API Rick And Morty</title>
+  <link href="./src/styles/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="font-jetbrains font-bold pt-12">
+  <div class="flex flex-col justify-center items-center gap-5 pb-10" id="pageHeader">
+    <h1 class="text-7xl text-[#202329]">Testing the Rick and Morty API</h1>
+    <span class="text-[#0994ca] text-xl">with this test you can search or filter data in three sections of this
+      api</span>
+    <p class="text-lg"><span class="text-[#0994ca] pr-4 text-xl">1.</span>All the characters that the Rick and Morty api
+      has to offer.</p>
+    <p class="text-lg"><span class="text-[#0994ca] pr-4 text-xl">2.</span>The specific location where some characters
+      are located.</p>
+    <p class="text-lg"><span class="text-[#0994ca] pr-4 text-xl">3.</span>All the episodes of the series that are
+      included in the api.</p>
+  </div>
+
+  <section class="bg-[#202329] min-h-screen p-8">
+
+    <div class="pt-8 flex flex-col justify-center items-center gap-3" id="seccionToFilter">
+      <h4 class="text-[#E6E7D7]">Mark only the section you want to filter</h4>
+      <label for="characters" class="text-[#E6E7D7]">
+        <input type="checkbox" id="input" name="characters" class="h-5 w-5">
+        Characters
+      </label>
+
+      <label for="sagaLocations" class="text-[#E6E7D7]">
+        <input type="checkbox" id="input" name="sagaLocations" value="">
+        Rick and Morty saga locations
+      </label>
+
+      <label for="episodes" class="text-[#E6E7D7]">
+        <input type="checkbox" id="input" name="episodes" value="">
+        Episodes
+      </label>
+    </div>
+
+    <div id="showData">
+      <div id="onlyCharacters" class="grid grid-cols-4 pt-12 gap-10 ">
+      </div>
+      <div id="onlyLocations" class="grid grid-cols-4 gap-10"></div>
+
+      <div id="onlyEpisodes" class="grid grid-cols-4 gap-20"></div>
+
+    </div>
+  </section>
+  <script src="./src/js/app.js" type="module"></script>
+  <script src="./src/js/characters.js" type="module"></script>
+</body>
+
+</html>
